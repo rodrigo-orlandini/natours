@@ -1,0 +1,33 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/*
+------------------- MEDIA QUERIES -------------------
+
+0 - 600px: Phone
+600px - 900px: Tablet portrait
+900px - 1200px: Tablet landscape
+
+1200px - 1800px is where our normal styles apply
+
+1800px +: Large Desktops
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };    //600px
+    }
+
+    @if $breakpoint == tablet {
+        @media only screen and (max-width: 56.25em) { @content };    //900px
+    }
+
+    @if $breakpoint == desktop {
+        @media only screen and (max-width: 75em) { @content };    //1200px
+    }
+}
