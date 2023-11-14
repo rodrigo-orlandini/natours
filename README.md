@@ -8,7 +8,7 @@ A landing page created to study CSS.
 ![CSS](.markdown/css.png "CSS")
 ![SASS](.markdown/sass.png "SASS")
 
----
+-----
 
 ### Related Projects
 
